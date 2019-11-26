@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21337750-8BAD-4ABF-8B44-B2E05D7CC64B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Questionnaire</RootNamespace>
+    <AssemblyName>Questionnaire</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SelectButton">
+      <HintPath>.\SelectButton.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adminPages\AddOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\AddOptions.Designer.cs">
+      <DependentUpon>AddOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\AddQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\AddQuestions.Designer.cs">
+      <DependentUpon>AddQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\AddQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\AddQuestionnaire.Designer.cs">
+      <DependentUpon>AddQuestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\ChartCollection.cs" />
+    <Compile Include="adminPages\StatisticsImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\StatisticsImg.Designer.cs">
+      <DependentUpon>StatisticsImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminPages\ViewStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminPages\ViewStatistics.Designer.cs">
+      <DependentUpon>ViewStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedInfo.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionDB.cs">
+      <DependentUpon>QuestionDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionDB1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuestionDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="startPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="startPage.Designer.cs">
+      <DependentUpon>startPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPages\AnswerQuestionCollection.cs" />
+    <Compile Include="UserPages\AnswerQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPages\AnswerQuestionnaire.Designer.cs">
+      <DependentUpon>AnswerQuestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\AnswerQuestions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPages\AnswerQuestions.Designer.cs">
+      <DependentUpon>AnswerQuestions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPages\UserStartPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPages\UserStartPage.Designer.cs">
+      <DependentUpon>UserStartPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adminPages\AddOptions.resx">
+      <DependentUpon>AddOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\AddQuestionnaire.resx">
+      <DependentUpon>AddQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\AddQuestions.resx">
+      <DependentUpon>AddQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\StatisticsImg.resx">
+      <DependentUpon>StatisticsImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminPages\ViewStatistics.resx">
+      <DependentUpon>ViewStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="startPage.resx">
+      <DependentUpon>startPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPages\AnswerQuestionnaire.resx">
+      <DependentUpon>AnswerQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPages\AnswerQuestions.resx">
+      <DependentUpon>AnswerQuestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPages\UserStartPage.resx">
+      <DependentUpon>UserStartPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QuestionDB.xsc">
+      <DependentUpon>QuestionDB.xsd</DependentUpon>
+    </None>
+    <None Include="QuestionDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuestionDB1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuestionDB.xss">
+      <DependentUpon>QuestionDB.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
